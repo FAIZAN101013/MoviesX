@@ -1,0 +1,109 @@
+:root {
+  /* Typography */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6; /* Slightly increased for better readability */
+  font-weight: 400;
+
+  /* Colors */
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  /* Performance and Accessibility */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Custom CSS Variables */
+  --primary-color: #646cff;
+  --primary-hover: #535bf2;
+  --secondary-color: #ffffff;
+  --background-dark: #242424;
+  --background-light: #ffffff;
+  --button-border-radius: 8px;
+  --transition-speed: 0.25s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  scroll-behavior: smooth; /* Adds smooth scrolling for navigation */
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--background-dark); /* Use CSS variable for consistency */
+  color: var(--secondary-color); /* Use variable for color */
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none; /* Avoid inherited underlines for cleaner links */
+  transition: color var(--transition-speed); /* Smooth hover effect */
+}
+a:hover {
+  color: var(--primary-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600; /* Emphasize headings */
+  margin-bottom: 1rem; /* Add consistent spacing below headings */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.2; /* Adjusted for better visual balance */
+}
+
+button {
+  border-radius: var(--button-border-radius);
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: var(--secondary-color); /* Consistent text color */
+  cursor: pointer;
+  transition: border-color var(--transition-speed), transform 0.2s; /* Add smooth hover effect */
+}
+button:hover {
+  border-color: var(--primary-color);
+  transform: scale(1.02); /* Subtle zoom on hover */
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: var(--background-light); /* Use light background for light mode */
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: var(--background-light);
+    color: #213547;
+  }
+}
+

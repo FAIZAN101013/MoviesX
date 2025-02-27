@@ -1,0 +1,153 @@
+.home {
+  padding: 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212; /* Add a subtle background for better contrast */
+  color: #ffffff;
+}
+.search-form {
+  max-width: 700px; /* Increased width for a larger form */
+  margin: 0 auto 2rem;
+  display: flex;
+  gap: 1rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.25rem; /* Increased padding for a larger input */
+  border: none;
+  border-radius: 8px; /* More rounded corners for a modern look */
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 1.25rem; /* Increased font size for better readability */
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px #e50914; /* Larger focus ring */
+  background-color: #1e1e1e;
+}
+
+.search-button {
+  padding: 1rem 2rem; /* Larger button size */
+  background-color: #e50914;
+  color: white;
+  border: none;
+  border-radius: 8px; /* Consistent with the input */
+  font-weight: 700; /* Bolder font */
+  font-size: 1.25rem; /* Increased font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  white-space: nowrap;
+  position: relative; /* For animation effect */
+  overflow: hidden; /* Prevents content from spilling out */
+}
+
+.search-button:hover {
+  background-color: #f40612;
+  transform: scale(1.1); /* Slightly larger scaling effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Button animation effect */
+.search-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.search-button:hover::before {
+  width: 200%;
+  height: 200%;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .search-form {
+    max-width: 100%; /* Full width on smaller screens */
+    padding: 0;
+  }
+
+  .search-input {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .search-button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust for smaller screens */
+  gap: 1.5rem;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  justify-items: center; /* Center movie cards */
+}
+
+.movies-grid > * {
+  background-color: #1e1e1e; /* Card background */
+  border-radius: 8px; /* Card styling */
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle depth for cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movies-grid > *:hover {
+  transform: scale(1.05); /* Card zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+.pre-footer {
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #121212; /* Add a subtle background for better contrast */
+  color: #ffffff;
+}
+@media (max-width: 639px) {
+  .home {
+    padding: 1rem 0;
+  }
+
+  .search-form {
+    flex-direction: column; /* Stack input and button */
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .search-input {
+    width: 100%; /* Full width for smaller screens */
+  }
+
+  .search-button {
+    width: 100%; /* Full width button */
+    text-align: center;
+  }
+
+  .movies-grid {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+}

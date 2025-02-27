@@ -1,0 +1,30 @@
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  justify-content: flex-start; /* Ensure content starts from the top */
+  background-color: #f9f9f9; /* Light background color for better readability */
+  color: #333; /* Standard text color */
+  border-radius: 8px; /* Slightly rounded corners for a modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin: 1rem auto; /* Center content with some margin */
+  max-width: 1200px; /* Limit the width for large screens */
+}
+
+/* Add responsive design for smaller screens */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem; /* Reduce padding for smaller screens */
+    margin: 0.5rem auto; /* Adjust margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.5rem; /* Further reduce padding for very small screens */
+  }
+}
