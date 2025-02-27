@@ -16,10 +16,14 @@ MOVIEX is a simple movie explorer web app that lets you browse popular movies, s
 - **LocalStorage** 🗄️
 
 ## 🏁 Getting Started
+
 1️⃣ **Clone the Repository**  
+
 git clone https://github.com/your-username/MOVIEX.git
 2️⃣ Navigate to the Project Folder
+
 cd MOVIEX
+
 3️⃣ Install Dependencies
 npm install
 4️⃣ Start the Development Server
